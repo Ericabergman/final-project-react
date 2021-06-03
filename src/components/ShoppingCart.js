@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 import { shopItems } from "../Data";
 
@@ -59,11 +58,13 @@ const ShoppingCart = () => {
     hardCopy = hardCopy.filter((cartItem) => cartItem.id !== el.id);
     setCart(hardCopy);
   };
+  // -------------------------------------------------------------------------
   // listItems
   const listItems = items.map((el) => (
     <div key={el.id}>
       {`${el.name}: ${el.price} kr `}
       <input
+        className="input-add"
         type="Submit"
         value="Add"
         onChange={handleSubmit}
@@ -78,6 +79,7 @@ const ShoppingCart = () => {
     <div key={el.id}>
       {`${el.name}: ${el.price} kr `}
       <input
+        className="input-remove"
         type="Submit"
         value="Remove"
         onChange={handleSubmit}
@@ -87,30 +89,25 @@ const ShoppingCart = () => {
   ));
 
   return (
-    <div className="container">
+    <div>
       <div className="container-store">
-        STORE
+        <h4 className="subtitle-store">Store</h4>
         <div>{listItems}</div>
       </div>
-
-      <div className="toggle">{toggled && <>{cartItems}</>}</div>
-      <button onClick={() => toggle((toggled) => !toggled)}>
+      <button
+        onClick={() => toggle((toggled) => !toggled)}
+        className="see-cart"
+      >
         See Your Cart
-        {/* <FaTimes /> */}
       </button>
+      <div className="toggle">
+        <h4 className="subtitle-cart-items">Cart Items</h4>
+        {toggled && <>{cartItems}</>}
+      </div>
 
-      {/* -------------------------------------------------- */}
-
-      <div className="cart-total">Total att betala: {cartTotal} kr</div>
-      <input className="submit" type="submit" value="close" />
+      <div>Total To Pay : {cartTotal} kr</div>
     </div>
   );
 };
 
 export default ShoppingCart;
-/* <div className="container-cart">
-  <div className="cart" onClick={() => setShow(!show)}>
-    {cartItems}CART
-  </div>
-  {show ?
-</div>; */

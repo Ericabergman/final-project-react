@@ -1,9 +1,11 @@
+import React from "react";
+
 const About = () => {
   return (
     <>
-      <div>
-        <h1>About Page</h1>
-        <p>
+      <div className="container-about">
+        <h1 className="title-about">About</h1>
+        <p className="about-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
           quae. Molestias consequatur, expedita dicta repellat modi praesentium
           debitis nobis possimus doloribus unde accusamus dolor iure cumque

@@ -1,14 +1,14 @@
 import React from "react";
-import Products from "../Pages/Home";
-const Product = () => {
+import ShoppingCart from "../components/ShoppingCart";
+const Products = () => {
   return (
     <>
-      <div>
-        <h1>Product Page</h1>
-        {/* <Products /> */}
+      <div className="container-products">
+        <h1 className="title-products">Products</h1>
+        <ShoppingCart />
       </div>
     </>
   );
 };
 
-export default Product;
+export default Products;

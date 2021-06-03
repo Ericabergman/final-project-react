@@ -23,7 +23,7 @@ export const shopItems = [
 
   {
     id: 5,
-    name: "Snack",
+    name: "Snacks",
     price: 40,
   },
 

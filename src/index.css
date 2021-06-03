@@ -12,81 +12,182 @@ code {
     monospace;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* html { */
-/* font-size: 62.55%; */
-/* }  */
-
 body {
   font-size: 1.6rem;
   font-family: "Dosis", sans-serif;
 }
 
-header {
-  background-image: url(./images/istockphoto-1207992615-612x612.jpg);
-  height: 100vh;
+/* styles for Home page */
+.background-image {
+  background: url(./images/istockphoto-1207992615-612x612.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  min-height: 80vh;
 }
 
-/* a {
-  text-decoration: none;
-} */
-
-/* ul,
-li {
-  list-style-type: none;
+.title-home {
+  text-align: center;
 }
 
 .container {
-  max-width: 114rem;
-  margin: 0 auto;
-} */
-
-/* @media only screen and (max-width: 1200px) {
-  .container {
-    padding: 0 3rem;
-  }
-} */
-
-.container {
+  text-align: center;
 }
-
+/* ------------------------------------------------------ */
+/* PRODUCTS */
 .container-store {
   width: 260px;
+  height: 350px;
   padding: 10px 10px 20px 10px;
   border: 1px solid #bfbfbf;
   background-color: white;
   box-shadow: 5px 5px 5px #aaaaaa;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
   background-color: lightslategray;
 }
 
-/* navigation */
-.container {
+.input-add-remove {
+  width: 5em;
+}
+/* ------------------------------------------------------ */
+/* ABOUT */
+
+.container-about {
+  text-align: center;
 }
 
-.nav {
-  background-color: burlywood;
+.title-about {
+  padding: 1rem;
+}
+
+.about-text {
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  border: 1px solid #bfbfbf;
+  padding: 1rem;
+  width: 400px;
   display: flex;
-  justify-content: space-between;
-  height: 3rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 1rem;
+}
+/* --------------------------------------------------------------- */
+/* CONTACT */
+
+.container-contact {
+  padding: 1em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.title-contact {
+  text-align: center;
+}
+
+.form {
+  width: 300px;
+  height: 350px;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.first-name,
+.last-name,
+.email,
+.message {
+  font-size: 20px;
+}
+
+input {
   width: 100%;
-  text-decoration: none;
-  list-style-type: none;
+  padding: 3px 3px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
-ul {
+.btn-submit {
+  text-align: center;
+  width: 20%;
+  color: black;
+  background-color: lightskyblue;
+  border-radius: 4px;
+  padding: 5px 5px;
 }
 
-li {
-  display: inline;
+/* ---------------------------------------------------- */
+/* SHOPPINGCART */
+.input-add {
+  background-color: lightgreen;
+  border-radius: 4px;
+  width: 50px;
+}
+
+.input-add:hover {
+  background-color: green;
+  border-radius: 4px;
+  width: 50px;
+  cursor: pointer;
+}
+.input-remove {
+  background-color: lightcoral;
+  border-radius: 4px;
+  width: 70px;
+  padding: 0.3rem;
+}
+
+.input-remove:hover {
+  background-color: red;
+  border-radius: 4px;
+  width: 70px;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.cart-total {
+  align-items: center;
+}
+
+.see-cart:hover {
+  background-color: darkgrey;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------- */
+/* PRODUCTS */
+.container-products {
+  padding: 1em;
+  /* height: 90vh; */
+}
+
+.title-products {
+  margin-top: 0;
+  text-align: center;
+}
+
+.subtitle-store {
+  margin-top: 0;
+}
+
+.toggle {
+  background-color: #f2f2f2;
+  width: 280px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.container-store {
+  width: 260px;
+  height: 320px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  background-color: #f2f2f2;
+}
+
+.subtitle-cart-items {
+  padding: 0.3rem;
 }
